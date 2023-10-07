@@ -1,0 +1,59 @@
+Action,Data,Expected Result
+"Check Dynamic fields pop-up by:
+ * Portal admin
+ * Buyer admin",,
+Pop-up field is appeared after click on 'Add new field',,"'Dynamic Field Modification' title
+
+'Describe field data' description
+
+'Display name*' and 'Field type*' fields are required"
+Click on 'Cancel' button,,
+Click on 'Save' button without filling 'Display name' and without choosen 'Field type',,"Errors are appeared
+_Display name is required_
+_Field type is required_"
+"Click on 'Save' button without filling 'Display name', but with choosen 'Field type'",,"Error is appeared
+_Display name is required_"
+Click on 'Save' button with filling 'Display name' and without choosen 'Field type',,"Errors are appeared
+_Field type is required_"
+Save Plan text field with 150 characters,,New Plain text field is added to Inbox
+Save Plan text field with more than 150 characters,,"The error ""Display name length must be less than 150 characters"" is appeared"
+Edit existing Plain text field,,"Pop-up for Field modifications is appeared
+
+Dropdown of 'Field type' is disabled"
+Click on 'Cancel' button,,
+"???????????????????????????????????
+
+Into pop-up change value for ""Display name"" field (Plain text) -> Save",,"The error ""Modification of display name is not allowed"" is appeared"
+"???????????????????????????????????
+
+Add new dynamic field with existing 'Display name', but different field type",,possible
+"???????????????????????????????????
+
+Add new dynamic field with existing 'Display name' and field type",,possible
+"Create new dynamic field with multiple selection:
+fill in only Display name",,"Error ""Please fill all option values"" is appeared"
+"Create new dynamic field with multiple selection:
+fill in only Display name and one option with 90 characters -> Save",,
+h3. Edit existing field with multiple selection,,
+"???????????????????????????????????
+
+Into pop-up change value for ""Display name"" field (field with multiple selection) -> Save",,"The error ""Modification of display name is not allowed"" is appeared"
+"Add new option with existing 'Option value"" -> Save",,"The error ""Option value ""________"" is not unique"" is appeared"
+Add new option with empty value -> Save,,"The error ""Please fill all option values"" is appeared"
+Add new option with more than 90 characters,,"The error ""Option value ""______""  length must be less than 90 characters"" is appeared"
+"Add new option with new 'Option value"" -> Save",,
+"???????????????????????????????????
+
+Edit ""Option value"" field-> Save",,"The error ""Modification of option value _______ is not allowed"" is appeared"
+Cancel deleting one option: Check checkbox for one option -> click on 'Delete option' -> Cancel,,
+Delete one option: Check checkbox for one option -> click on 'Delete option' -> Confirm,,
+Delete some options: Check two checkboxes -> click on 'Delete option' -> Confirm,,
+Delete all options: Check checkbox in top row (title) -> click on 'Delete option' -> Confirm,,
+Apply filter,,
+Reset filter,,
+"???????????????????????
+
+Apply filter -> Save -> Open Field with multiple selection again",,
+Hide 'Selection' column -> Save,,
+Reset profile,,
+Check localization of pop-up for Field modifications,,
